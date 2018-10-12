@@ -10,6 +10,8 @@ import UIKit
 
 class GroceryListViewController: UITableViewController {
 
+    let groceryList = ["one","two","three"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,7 +31,7 @@ class GroceryListViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return groceryList.count
     }
 
     
@@ -37,9 +39,12 @@ class GroceryListViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "listItem", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = "howdy"
+        cell.textLabel?.text = groceryList[indexPath.row]
         cell.detailTextLabel?.text = "description"
-
+        cell.detailTextLabel?.numberOfLines = 0;
+        cell.detailTextLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping;
+        //cell.imageView?.image = UIImage(named: noImageYet)
+        
         return cell
     }
     
