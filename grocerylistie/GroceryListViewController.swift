@@ -37,6 +37,8 @@ class GroceryListViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "listItem", for: indexPath)
 
         // Configure the cell...
+        cell.textLabel?.text = "howdy"
+        cell.detailTextLabel?.text = "description"
 
         return cell
     }
