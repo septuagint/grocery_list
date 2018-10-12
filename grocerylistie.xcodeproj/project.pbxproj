@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		867787DC2170C19F00F00291 /* GroceryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867787DB2170C19F00F00291 /* GroceryListViewController.swift */; };
 		869C3838215E485B001DEBA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869C3837215E485B001DEBA4 /* AppDelegate.swift */; };
 		869C383A215E485B001DEBA4 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869C3839215E485B001DEBA4 /* FirstViewController.swift */; };
 		869C383C215E485B001DEBA4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869C383B215E485B001DEBA4 /* SecondViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		867787DB2170C19F00F00291 /* GroceryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryListViewController.swift; sourceTree = "<group>"; };
 		869C3834215E485B001DEBA4 /* grocerylistie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = grocerylistie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		869C3837215E485B001DEBA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		869C3839215E485B001DEBA4 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				869C3840215E485D001DEBA4 /* Assets.xcassets */,
 				869C3842215E485D001DEBA4 /* LaunchScreen.storyboard */,
 				869C3845215E485D001DEBA4 /* Info.plist */,
+				867787DB2170C19F00F00291 /* GroceryListViewController.swift */,
 			);
 			path = grocerylistie;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				867787DC2170C19F00F00291 /* GroceryListViewController.swift in Sources */,
 				869C383C215E485B001DEBA4 /* SecondViewController.swift in Sources */,
 				869C3838215E485B001DEBA4 /* AppDelegate.swift in Sources */,
 				869C383A215E485B001DEBA4 /* FirstViewController.swift in Sources */,
