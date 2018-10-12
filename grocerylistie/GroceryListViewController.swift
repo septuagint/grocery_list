@@ -43,7 +43,7 @@ class GroceryListViewController: UITableViewController {
         cell.detailTextLabel?.text = "description"
         cell.detailTextLabel?.numberOfLines = 0;
         cell.detailTextLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping;
-        //cell.imageView?.image = UIImage(named: noImageYet)
+        cell.imageView?.image = UIImage(named: "first")
         
         return cell
     }
