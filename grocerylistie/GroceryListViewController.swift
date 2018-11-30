@@ -10,7 +10,10 @@ import UIKit
 
 class GroceryListViewController: UITableViewController {
 
-    let groceryList = ["one","two","three"]
+    let groceryList = ["targetList","walmartList","samsClubList"]
+    let groceryListDescriptions = ["this is the everyday needs", "needs for the month", "holiday list"]
+    let groceryListImages = ["first", "second", "first"]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,10 +43,10 @@ class GroceryListViewController: UITableViewController {
 
         // Configure the cell...
         cell.textLabel?.text = groceryList[indexPath.row]
-        cell.detailTextLabel?.text = "description"
+        cell.detailTextLabel?.text = groceryListDescriptions[indexPath.row]
         cell.detailTextLabel?.numberOfLines = 0;
         cell.detailTextLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping;
-        cell.imageView?.image = UIImage(named: "first")
+        cell.imageView?.image = UIImage(named: groceryListImages[indexPath.row])
         
         return cell
     }
