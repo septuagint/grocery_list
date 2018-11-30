@@ -10,9 +10,69 @@ import UIKit
 
 class GroceryListViewController: UITableViewController {
 
-    let groceryList = ["targetList","walmartList","samsClubList"]
-    let groceryListDescriptions = ["this is the everyday needs", "needs for the month", "holiday list"]
-    let groceryListImages = ["first", "second", "first"]
+    var groceryList = ["targetList","walmartList","samsClubList"]
+    var groceryListDescriptions = ["this is the everyday needs", "needs for the month", "holiday list"]
+    var groceryListImages = ["first", "second", "first"]
+    
+
+    @IBAction func addGroceryList(_ sender: Any) {
+        let alert = UIAlertController(title: "Alert", message: "Let's add another list", preferredStyle: .alert)
+        //self.present(alert, animated: true, completion: nil)
+        
+        //let action1 = UIAlertAction(title: "Default", style: .default) { (action:UIAlertAction) in
+        //    print("You've pressed default");
+        //}
+        
+        let action = UIAlertAction(title: "Add Grocery List", style: .default) { (alertAction) in
+            
+            let textField = alert.textFields![0] as UITextField
+
+            let descField = alert.textFields![1] as UITextField
+            
+            if (textField.text! != "" && descField.text! != "") {
+                self.groceryList.append(textField.text!)
+                self.groceryListDescriptions.append(descField.text!)
+                self.groceryListImages.append("second")
+                self.tableView.reloadData()
+            }
+        }
+        
+        alert.addTextField { (textField) in
+            textField.placeholder = "Enter your list"
+            
+        }
+        
+        alert.addTextField { (textField) in
+            textField.placeholder = "Enter your description"
+        }
+
+        
+        let action2 = UIAlertAction(title: "Cancel", style: .cancel) { (action:UIAlertAction) in
+            print("You've pressed cancel");
+        }
+        
+        //let action3 = UIAlertAction(title: "Destructive", style: .destructive) { (action:UIAlertAction) in
+        //    print("You've pressed the destructive");
+        //}
+        
+        alert.addAction(action)
+        alert.addAction(action2)
+        //alert.addAction(action3)
+        self.present(alert, animated: true, completion: nil)
+
+/*
+        let action = UIAlertAction(title: "Name Input", style: .default) { (alertAction) in
+            let textField = alert.textFields![0] as UITextField
+        }
+        
+        alert.addTextField { (textField) in
+            textField.placeholder = "Enter your name"
+        }
+        
+        alert.addAction(action)
+        self.window.present(self.window.rootViewController, animated:true, completion: nil)
+ */
+    }
     
     
     override func viewDidLoad() {
