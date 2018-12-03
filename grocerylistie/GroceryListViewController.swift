@@ -29,11 +29,22 @@ class GroceryListViewController: UITableViewController {
 
             let descField = alert.textFields![1] as UITextField
             
-            if (textField.text! != "" && descField.text! != "") {
+            let testField = alert.textFields![2] as UITextField
+            
+            if (textField.text! != "" && descField.text! != "" && testField.text! != "") {
                 self.groceryList.append(textField.text!)
                 self.groceryListDescriptions.append(descField.text!)
                 self.groceryListImages.append("second")
                 self.tableView.reloadData()
+                let alert2 = UIAlertController(title: "added", message: "we have added your list " + testField.text!, preferredStyle: .alert)
+                
+                let actionConfirm = UIAlertAction(title: "confirm", style: .cancel) { (action:UIAlertAction) in
+                    print("You've pressed cancel");
+                    
+                }
+                alert2.addAction(actionConfirm)
+                self.present(alert2, animated: true, completion: nil)
+                
             }
         }
         
@@ -46,6 +57,9 @@ class GroceryListViewController: UITableViewController {
             textField.placeholder = "Enter your description"
         }
 
+        alert.addTextField { (textField) in
+            textField.placeholder = "test"
+        }
         
         let action2 = UIAlertAction(title: "Cancel", style: .cancel) { (action:UIAlertAction) in
             print("You've pressed cancel");
@@ -60,19 +74,12 @@ class GroceryListViewController: UITableViewController {
         //alert.addAction(action3)
         self.present(alert, animated: true, completion: nil)
 
-/*
-        let action = UIAlertAction(title: "Name Input", style: .default) { (alertAction) in
-            let textField = alert.textFields![0] as UITextField
-        }
         
-        alert.addTextField { (textField) in
-            textField.placeholder = "Enter your name"
-        }
-        
-        alert.addAction(action)
-        self.window.present(self.window.rootViewController, animated:true, completion: nil)
- */
     }
+    
+    
+    
+    
     
     
     override func viewDidLoad() {
